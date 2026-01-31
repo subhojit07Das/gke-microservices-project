@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      container:
+      - name: backend
+        image: asia-south1-docker.pkg.dev/valiant-marker-485408-f4/backend-repo/backend:v1
+        ports:
+        - containerPort: 5000
