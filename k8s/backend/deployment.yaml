@@ -13,8 +13,8 @@ spec:
       labels:
         app: backend
     spec:
-      container:
+      containers:
       - name: backend
-        image: asia-south1-docker.pkg.dev/valiant-marker-485408-f4/backend-repo/backend:v1
+        image: asia-south1-docker.pkg.dev/valiant-marker-485408-f4/backend-repo/backend:v2
         ports:
         - containerPort: 5000
