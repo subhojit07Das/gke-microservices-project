@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GKE Microservices</title>
+  <title>Frontend</title>
 </head>
 <body>
-  <h1>Frontend running on GKE íº€</h1>
-  <p>Backend URL: <code>/api</code></p>
+  <h1>Frontend Running on GKE</h1>
+
+  <button onclick="callBackend()">Call Backend</button>
+  <p id="response"></p>
+
+  <script>
+    function callBackend() {
+      fetch("/api/")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("response").innerText = data;
+        })
+        .catch(() => {
+          document.getElementById("response").innerText = "Backend not reachable";
+        });
+    }
+  </script>
 </body>
 </html>
 
