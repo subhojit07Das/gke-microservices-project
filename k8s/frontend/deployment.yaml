@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: asia-south1-docker.pkg.dev/valiant-marker-485408-f4/frontend-repo/frontend:v1
+        image: asia-south1-docker.pkg.dev/valiant-marker-485408-f4/frontend-repo/frontend:v2
         ports:
         - containerPort: 80
